@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="logo" width="250" height="200" viewBox="0 0 250 200">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.1111L12.5 0H237.5L250 11.1111V188.889L237.5 200H12.5L0 188.889V11.1111ZM25 22.2222V177.778H225V22.2222H25Z"/>
+    <path d="M48 59.3202L89.6646 99.6496L48 139.977L65.8939 157.298L125.452 99.6496L65.8939 42L48 59.3202Z"/>
+    <path d="M198.841 157.518H135.577V133.023H198.841V157.518Z"/>
+  </symbol>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="arrows" width="40" height="45" viewBox="0 0 40 45" fill="none">
+    <path d="M2 22L20.4737 41L38 22" stroke-width="5"/>
+    <path d="M2 2L20.4737 22L38 2" stroke-width="5"/>
+  </symbol>
+</svg>

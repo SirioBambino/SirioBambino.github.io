@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="open-menu" width="50px" height="50px" viewBox="0 0 50 50">
+    <path d="M50 2H7.05719e-07V10H50V2Z"/>
+    <path d="M50 21H0V29H50V21Z"/>
+    <path d="M50 40H7.05719e-07V48H50V40Z"/>
+  </symbol>
+</svg>

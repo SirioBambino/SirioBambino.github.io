@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="shape-divider" viewBox="0 0 1920 200">
+      <path d="M392 35L0 170V200H1900V60L1805.5 132L1489 76L1102.5 156L392 35Z"/>
+      <path d="M0 50V164.5V200H1900V56.5L1482 178L1097.5 66.5L518 143L0 50Z" opacity="0.5"/>
+      <path d="M225 40L0 85V200H1900V149.5L1711.5 57.5L1453.5 149.5L791.5 57.5L411 123L225 40Z" opacity="0.25"/>
+    </symbol>
+  </defs>
+</svg>
