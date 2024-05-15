@@ -10,5 +10,22 @@
         </svg>
       </a>
     </div>
+
+    <!-- Menu -->
+    <div class="site-menu">
+      <!-- Navigation -->
+      {%- for section in site.sections -%}
+      <div class="site-menu-item">
+        <button
+          type="button"
+          class="nav-button"
+          id="{{ section.sectionID }}-nav"
+          onclick="functionforscroll('{{ section.sectionID }}')"
+        >
+          {{ section.sectionID | capitalize }}
+        </button>
+      </div>
+      {%- endfor -%}
+    </div>
   </nav>
 </header>
