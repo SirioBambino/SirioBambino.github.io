@@ -1,0 +1,64 @@
+// Import font families
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+// Variables for font families
+$font-body: "Hind Guntur", sans-serif;
+$font-heading: "Inter", sans-serif;
+
+// Variables for font weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Include the padding in the total size of all elements
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // Smoothly animate the scroll position, instead of a straight jump
+  scroll-behavior: smooth;
+  // Change default font size to 10px
+  font-size: 62.5%;
+}
+
+// Set the style rules for the body
+body {
+  font-family: $font-body;
+  font-weight: $regular;
+  font-size: 2.5rem;
+  line-height: 2.75em;
+  color: var(--text-colour);
+  background-color: var(--background-primary-colour);
+}
+
+// Set the style rules for all headings in the document
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: $medium;
+  color: var(--text-colour);
+}
+
+// Set the style rules for all anchors in the document
+a {
+  text-decoration: none;
+  font-weight: $light;
+  color: var(--link-colour);
+}
+
+// Set the style rules for the content
+.page-content {
+  width: 100%;
+  z-index: 2;
+}
