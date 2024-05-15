@@ -1,0 +1,32 @@
+title: Sirio Bambino
+tagline: Software and Game Development Portfolio of Computer Science Graduate.
+description:
+  Software and Game Development Portfolio of Sirio Bambino. Computer Science Graduate from City,
+  University of London with knowledge of C#, Java, Python, C++, HTML, CSS and JavaScript.
+
+author:
+  name: Sirio Bambino
+  email: bambino.sirio@gmail.com
+  github: https://github.com/SirioBambino
+  linkedin: https://www.linkedin.com/in/siriobambino
+
+social:
+  name: Sirio Bambino
+  links:
+    - https://github.com/SirioBambino
+    - https://www.linkedin.com/in/siriobambino
+
+domain: siriobambino.github.io
+url: https://siriobambino.github.io
+
+baseurl: /
+
+sass:
+  style: compressed
+exclude:
+  - Gemfile
+  - README.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-minifier
