@@ -24,6 +24,17 @@ baseurl: /
 sass:
   style: compressed
 
+collections:
+  sections:
+    order:
+      - about.md
+      - projects.md
+      - contact.md
+
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
+
 exclude:
   - Gemfile
   - README.md

@@ -5,6 +5,12 @@
   <body>
     {% include header.html -%}
 
-    <main class="page-content"></main>
+    <main class="page-content">
+      {%- for section in site.sections -%}
+      <div class="{{ section.sectionID }} content-section" id="{{ section.sectionID }}">
+        {{ section.output }}
+      </div>
+      {%- endfor -%}
+    </main>
   </body>
 </html>
