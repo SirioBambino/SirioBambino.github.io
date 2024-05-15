@@ -23,6 +23,7 @@ baseurl: /
 
 sass:
   style: compressed
+
 exclude:
   - Gemfile
   - README.md
