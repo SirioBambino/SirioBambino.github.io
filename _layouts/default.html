@@ -6,7 +6,7 @@
     {% include header.html -%}
 
     <main class="page-content">
-      {% # Calculate wether the amound of sections is odd or even %}
+      {% comment %} Calculate wether the amound of sections is odd or even {% endcomment %}
       {% assign sectionCountModulo = site.sections.size | modulo : 2 %}
       
       {%- for section in site.sections -%}
@@ -17,7 +17,7 @@
       {%- endfor -%}
     </main>
 
-    {% # Use sectionCountModulo to determine the colour of the footer %}
+    {% comment %} Use sectionCountModulo to determine the colour of the footer {% endcomment %}
     {% if sectionCountModulo == 0 %}
     {%- include footer.html colour="primary" -%}
     {% else %}
