@@ -18,4 +18,17 @@
       fill: hsl(210, 24%, 89%);
     }
   }
+
+  &-nav {
+    // Set the nav height to the entire width of the header
+    height: 100%;
+
+    // Set up flexbox layout
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // Set the nav padding
+    padding: 0 18vw;
+  }
 }
