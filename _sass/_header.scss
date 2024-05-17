@@ -1,0 +1,21 @@
+// Set the style rules for elements in the header
+.site {
+  &-header {
+    // Make the header fixed at the top
+    position: fixed;
+    top: 0;
+
+    // Set the header width to the entire width of site
+    width: 100%;
+    z-index: 5;
+
+    // Set the header height and background colour
+    height: 7rem;
+    background-color: hsl(240, 7%, 20%);
+
+    // Change all svg fill colour
+    svg {
+      fill: hsl(210, 24%, 89%);
+    }
+  }
+}
