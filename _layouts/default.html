@@ -13,6 +13,7 @@
       <div class="{{ section.sectionID }} content-section" id="{{ section.sectionID }}">
         <h2>{{ section.title }}</h2>
         {{ section.output }}
+        {%- include shape-divider.html -%}
       </div>
       {%- endfor -%}
     </main>
