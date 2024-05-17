@@ -6,6 +6,9 @@
     {% include header.html -%}
 
     <main class="page-content">
+      {% # Calculate wether the amound of sections is odd or even %}
+      {% assign sectionCountModulo = site.sections.size | modulo : 2 %}
+      
       {%- for section in site.sections -%}
       <div class="{{ section.sectionID }} content-section" id="{{ section.sectionID }}">
         <h2>{{ section.title }}</h2>
@@ -13,5 +16,12 @@
       </div>
       {%- endfor -%}
     </main>
+
+    {% # Use sectionCountModulo to determine the colour of the footer %}
+    {% if sectionCountModulo == 0 %}
+    {%- include footer.html colour="primary" -%}
+    {% else %}
+    {%- include footer.html colour="secondary" -%}
+    {% endif %}
   </body>
 </html>
