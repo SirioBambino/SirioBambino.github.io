@@ -10,6 +10,7 @@
       {% assign sectionCountModulo = site.sections.size | modulo : 2 %}
       
       {%- for section in site.sections -%}
+      <!-- {{ section.sectionID | capitalize }} section -->
       <div class="{{ section.sectionID }} content-section" id="{{ section.sectionID }}">
         <h2>{{ section.title }}</h2>
         {{ section.output }}
