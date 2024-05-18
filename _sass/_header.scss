@@ -53,4 +53,43 @@
       }
     }
   }
+
+  &-menu {
+    // Set up flexbox layout to align elements
+    display: flex;
+    flex-direction: row;
+
+    &-item {
+      // Set up flexbox layout to align element
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // Set the side margins for nav item
+      margin-left: $header-nav-items-margin;
+
+      button {
+        // Set the font styling for nav item
+        font-size: $header-nav-font-size;
+        font-family: $font-heading;
+        font-weight: $regular;
+        color: var(--text-colour);
+
+        // Remove all styling from button
+        @include buttonNoStyle();
+      }
+
+      // Set a different colour for current section
+      .current {
+        color: var(--accent-colour);
+      }
+    }
+
+    .theme-toggle {
+      // Set width of theme toggle svg
+      svg {
+        width: 4rem;
+      }
+    }
+  }
 }
