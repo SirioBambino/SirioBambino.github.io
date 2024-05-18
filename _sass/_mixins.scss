@@ -1,0 +1,7 @@
+// Remove all styling from button
+@mixin buttonNoStyle() {
+  background-color: transparent;
+  outline: none;
+  border: 0px transparent solid;
+  cursor: pointer;
+}
