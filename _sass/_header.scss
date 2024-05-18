@@ -20,10 +20,10 @@
   }
 
   &-nav {
-    // Set the nav height to the entire width of the header
+    // Set the nav height to the entire height of the header
     height: 100%;
 
-    // Set up flexbox layout
+    // Set up flexbox layout to align elements
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,6 +114,84 @@
       // Set width of mobile menu button svg
       svg {
         width: 3.5rem;
+      }
+    }
+  }
+}
+
+// Media query for small screens
+@media (max-width: 768px) {
+  .site {
+    // Set a different nav padding
+    &-nav {
+      padding: 0 $header-side-padding-mobile;
+    }
+
+    &-menu {
+      // Make the menu fixed with the header
+      position: fixed;
+
+      // Hide the menu until the menu button is pressed
+      display: none;
+
+      // Set up a different flexbox layout to align elements vertically
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      // Set the menu width to cover the entire site
+      width: 105vw;
+
+      // Move menu below the header
+      top: $header-height;
+
+      // Move menu to the left as it starts from the padding position
+      transform: translateX(-$header-side-padding-mobile);
+
+      // Set the background colour
+      background-color: var(--header-colour);
+
+      // Set different height, margin and font size
+      &-item {
+        height: $header-nav-items-height-mobile;
+        margin: $header-nav-items-margin-mobile 0;
+
+        .nav-button {
+          font-size: $header-nav-font-size-mobile;
+        }
+      }
+    }
+
+    &-menu-button {
+      // Unhide mobile menu button
+      position: relative;
+      display: flex;
+
+      // Display open menu svg
+      .open-menu-button {
+        display: block;
+      }
+
+      // Hide close menu svg
+      .close-menu-button {
+        display: none;
+      }
+    }
+
+    &-open-menu {
+      // Unhide menu
+      .site-menu {
+        display: flex;
+      }
+
+      // Hide open menu svg
+      .open-menu-button {
+        display: none;
+      }
+
+      // Display close menu svg
+      .close-menu-button {
+        display: block;
       }
     }
   }
