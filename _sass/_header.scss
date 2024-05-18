@@ -92,4 +92,29 @@
       }
     }
   }
+
+  &-menu-button {
+    // Hide mobile menu button on bigger screens
+    display: none;
+
+    // Change position to absolute to stop it from interfering with the parent's flexbox layout
+    position: absolute;
+
+    // Align the button to the center
+    justify-content: center;
+    align-items: center;
+
+    // Set the mobile menu button height to the entire height of the header
+    height: 100%;
+
+    .menu-toggle {
+      // Remove all styling from button
+      @include buttonNoStyle();
+
+      // Set width of mobile menu button svg
+      svg {
+        width: 3.5rem;
+      }
+    }
+  }
 }
