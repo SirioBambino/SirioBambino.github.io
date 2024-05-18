@@ -11,11 +11,11 @@
 
     // Set the header height and background colour
     height: $header-height;
-    background-color: hsl(240, 7%, 20%);
+    background-color: var(--header-colour);
 
     // Change all svg fill colour
     svg {
-      fill: hsl(210, 24%, 89%);
+      fill: var(--icon-colour);
     }
   }
 
@@ -30,5 +30,30 @@
 
     // Set the nav padding
     padding: 0 $header-side-padding;
+  }
+
+  &-logo {
+    // Set up flexbox layout to align element
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      // Set up flexbox layout to align element
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // Remove all styling from button
+      background-color: transparent;
+      outline: none;
+      border: 0px transparent solid;
+      cursor: pointer;
+
+      // Set width of logo svg
+      svg {
+        width: 5rem;
+      }
+    }
   }
 }
