@@ -5,3 +5,22 @@
   border: 0px transparent solid;
   cursor: pointer;
 }
+
+// Set the shape divider fill to the opposite background colour given
+@mixin shape-divider-colour($background-colour) {
+  @if $background-colour == $background-primary-colour {
+    .shape-divider {
+      svg {
+        fill: var(--background-secondary-colour);
+      }
+    }
+  } @else if $background-colour == $background-secondary-colour {
+    .shape-divider {
+      svg {
+        fill: var(--background-primary-colour);
+      }
+    }
+  } @else {
+    @error "Valid inputs for '$background-colour' are '$background-primary-colour' or '$background-secondary-colour'.";
+  }
+}
