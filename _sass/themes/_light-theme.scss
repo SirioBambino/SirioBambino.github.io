@@ -11,8 +11,8 @@ $icon-colour: $text-colour;
 $link-colour: $accent-colour;
 $link-hover-colour: lighten($link-colour, 7%);
 
-$scrollbar-background-colour: hsl(240, 7%, 16%);
-$scrollbar-handle-colour: lighten($scrollbar-background-colour, 4%);
+$scrollbar-background-colour: hsl(240, 6%, 87%);
+$scrollbar-handle-colour: darken($scrollbar-background-colour, 10%);
 
 @mixin light-theme {
   html,
