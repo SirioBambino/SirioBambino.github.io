@@ -1,0 +1,19 @@
+// Width
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+// Background
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-background-colour);
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-handle-colour);
+}
+
+// Arrows
+::-webkit-scrollbar-button {
+  display: none;
+}
