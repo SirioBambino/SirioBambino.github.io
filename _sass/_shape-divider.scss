@@ -1,0 +1,32 @@
+.shape-divider {
+  // Position div at the bottom of section
+  position: absolute;
+  left: 0;
+  padding: 0;
+
+  // Set the width of div to the entire width of the body
+  width: 100%;
+
+  // Increase z index to prevent other elements from covering div
+  z-index: 2;
+
+  // Hide div overflow and ignore pointer events
+  overflow: hidden;
+  pointer-events: none;
+
+  // Move div down slightly to prevent small gaps
+  transform: translateY(5px);
+
+  // Make svg stretch and squash to the width of the viewport
+  svg {
+    position: relative;
+    display: block;
+    width: 102.5%;
+    height: 150px;
+  }
+}
+
+// Set bottom of the first div to 0 to prevent it from moving from the bottom
+.first {
+  bottom: 0;
+}
