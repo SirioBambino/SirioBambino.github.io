@@ -45,6 +45,36 @@ a {
 
 // Set the style rules for the content
 .page-content {
-  width: 100%;
-  z-index: 2;
+  // Set max width so content resizes
+  max-width: 100%;
+
+  // Set margin under each section's heading
+  h2 {
+    margin-bottom: 5rem;
+  }
+
+  // Set padding for each section
+  .content-section {
+    padding: 5vh $site-side-padding 150px;
+  }
+
+  // Alternate the 2 background colours on each section
+  .content-section:nth-of-type(odd) {
+    background-color: var(--background-primary-colour);
+    @include shape-divider-colour($background-primary-colour);
+  }
+
+  .content-section:nth-of-type(even) {
+    background-color: var(--background-secondary-colour);
+    @include shape-divider-colour($background-secondary-colour);
+  }
+}
+
+// Media query for small screens
+@media (max-width: 768px) {
+  .page-content {
+    .content-section {
+      padding: 5vh $site-side-padding-mobile 150px;
+    }
+  }
 }
