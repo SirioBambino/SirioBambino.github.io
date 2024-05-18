@@ -3,12 +3,16 @@
   <nav class="site-nav">
     <!-- Logo -->
     <div class="site-logo">
-      <a href="#">
+      <button 
+        class="logo-button"
+        type="button"
+        onclick="scrollToSection()"
+      >
         <svg width="50" height="40">
           <title>Logo</title>
-          <use class="logo" xlink:href="assets/symbols/logo.svg#logo" width="50" height="40" />
+          <use xlink:href="assets/symbols/logo.svg#logo" width="50" height="40" />
         </svg>
-      </a>
+      </button>
     </div>
 
     <!-- Menu -->
@@ -17,11 +21,12 @@
       {%- for section in site.sections -%}
       <div class="site-menu-item">
         <button
-          type="button"
           class="nav-button"
           id="{{ section.sectionID }}-nav"
-          onclick="functionforscroll('{{ section.sectionID }}')"
+          type="button"
+          onclick="scrollToSection('{{ section.sectionID }}')"
         >
+          <title>{{ section.sectionID | capitalize }} section</title>
           {{ section.sectionID | capitalize }}
         </button>
       </div>
@@ -29,7 +34,11 @@
 
       <!-- Theme button -->
       <div class="site-menu-item">
-        <button title="Toggle Theme" class="theme-toggle">
+        <button 
+          class="theme-toggle"
+          type="button"
+          onclick="toggleTheme()"
+        >
           <svg class="light-theme-button" width="40" height="40">
             <title>Light theme button</title>
             <use xlink:href="assets/symbols/sun.svg#sun" width="40" height="40" />
@@ -42,9 +51,13 @@
       </div>
     </div>
 
-     <!-- Menu button -->
-     <div class="site-menu-button">
-      <button class="menu-toggle hover-effect" title="Toggle Menu">
+    <!-- Menu button -->
+    <div class="site-menu-button">
+      <button 
+        class="menu-toggle hover-effect"
+        type="button"
+        onclick="toggleMobileMenu()"
+      >
         <svg class="open-menu-button" width="35" height="35">
           <title>Open navigation menu</title>
           <use xlink:href="assets/symbols/menu-open.svg#open-menu" width="35" height="35" />
