@@ -10,17 +10,23 @@
 html {
   // Smoothly animate the scroll position, instead of a straight jump
   scroll-behavior: smooth;
-  // Change default font size to 10px
+  // Make default font size 10px to make rem values easier to set
   font-size: 62.5%;
 }
 
 // Set the style rules for the body
 body {
+  // Set the font styling
   font-family: $font-body;
   font-weight: $regular;
-  font-size: 2.5rem;
-  line-height: 2.75em;
+  line-height: 1.5em;
   color: var(--text-colour);
+
+  // Make the font size dependent on screen width but clamp it
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+
+  // Set the width and background colour
+  width: 100%;
   background-color: var(--background-primary-colour);
 }
 
@@ -31,6 +37,7 @@ h3,
 h4,
 h5,
 h6 {
+  // Set the font styling
   font-family: $font-heading;
   font-weight: $medium;
   color: var(--text-colour);
@@ -38,9 +45,15 @@ h6 {
 
 // Set the style rules for all anchors in the document
 a {
+  // Set the font styling
   text-decoration: none;
   font-weight: $light;
   color: var(--link-colour);
+
+  // Set different colour on hover
+  &:hover {
+    color: var(--link-hover-colour);
+  }
 }
 
 // Set the style rules for the content
