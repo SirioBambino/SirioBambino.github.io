@@ -12,6 +12,16 @@ $regular: 400;
 $medium: 500;
 $bold: 700;
 
+// Variables for site styling
+$site-side-padding: 18vw;
+$site-side-padding-mobile: calc($site-side-padding * 0.25);
+
 // Variables for header styling
 $header-height: 7rem;
-$header-side-padding: 9vw;
+$header-side-padding: calc($site-side-padding * 0.5);
+$header-side-padding-mobile: calc($site-side-padding * 0.25);
+$header-nav-items-margin: 5vw;
+$header-nav-items-margin-mobile: calc(2vh + 0px);
+$header-nav-font-size: 2.5rem;
+$header-nav-font-size-mobile: 3rem;
+$header-nav-items-height-mobile: 6rem;
