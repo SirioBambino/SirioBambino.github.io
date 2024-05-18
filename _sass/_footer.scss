@@ -1,0 +1,21 @@
+.footer {
+  // Set up flexbox layout to align elements
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Set the footer height
+  height: $footer-height;
+
+  // Make the font size dependent on screen width but clamp it
+  font-size: clamp(1rem, 3.5vw, 2rem);
+
+  // Set a different background colour depending on the number of sections
+  &.primary {
+    background-color: var(--background-primary-colour);
+  }
+
+  &.secondary {
+    background-color: var(--background-secondary-colour);
+  }
+}
