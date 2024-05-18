@@ -1,0 +1,40 @@
+$accent-colour: hsl(248, 49%, 64%);
+
+$background-primary-colour: hsl(240, 7%, 17%);
+$background-secondary-colour: lighten($background-primary-colour, 6%);
+
+$header-colour: darken($background-primary-colour, 3%);
+
+$text-colour: hsl(210, 24%, 89%);
+$icon-colour: $text-colour;
+
+$link-colour: $accent-colour;
+$link-hover-colour: lighten($link-colour, 6%);
+
+$scrollbar-background-colour: hsl(240, 7%, 16%);
+$scrollbar-handle-colour: lighten($scrollbar-background-colour, 4%);
+
+@mixin dark-theme {
+  html,
+  body {
+    --accent-colour: #{$accent-colour};
+
+    --background-primary-colour: #{$background-primary-colour};
+    --background-secondary-colour: #{$background-secondary-colour};
+
+    --header-colour: #{$header-colour};
+
+    --text-colour: #{$text-colour};
+    --icon-colour: #{$icon-colour};
+
+    --link-colour: #{$link-colour};
+    --link-hover-colour: #{$link-hover-colour};
+
+    --scrollbar-background-colour: #{$scrollbar-background-colour};
+    --scrollbar-handle-colour: #{$scrollbar-handle-colour};
+  }
+}
+
+html[data-theme="dark"] {
+  @include dark-theme;
+}
