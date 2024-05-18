@@ -21,7 +21,7 @@
       {%- for section in site.sections -%}
       <div class="site-menu-item">
         <button
-          class="nav-button"
+          class="nav-button hover-effect"
           id="{{ section.sectionID }}-nav"
           type="button"
           onclick="scrollToSection('{{ section.sectionID }}')"
@@ -35,7 +35,7 @@
       <!-- Theme button -->
       <div class="site-menu-item">
         <button 
-          class="theme-toggle"
+          class="theme-toggle hover-effect"
           type="button"
           onclick="toggleTheme()"
         >

@@ -77,6 +77,9 @@
 
         // Remove all styling from button
         @include buttonNoStyle();
+
+        // Set hover behaviour
+        @include hover();
       }
 
       // Set a different colour for current section
@@ -86,6 +89,9 @@
     }
 
     .theme-toggle {
+      // Set hover behaviour
+      @include hover(fill);
+
       // Set width of theme toggle svg
       svg {
         width: 4rem;
@@ -110,6 +116,9 @@
     .menu-toggle {
       // Remove all styling from button
       @include buttonNoStyle();
+
+      // Set hover behaviour
+      @include hover(fill);
 
       // Set width of mobile menu button svg
       svg {

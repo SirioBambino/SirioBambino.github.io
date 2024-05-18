@@ -24,3 +24,47 @@
     @error "Valid inputs for '$background-colour' are '$background-primary-colour' or '$background-secondary-colour'.";
   }
 }
+
+// Set hover behaviour to scale element and change colour for either text or svg
+// To simulate hover behaviour on touch screen devices, the hover transition is
+// played while the the user is pressing down on the touchscreen
+@mixin hover($type: color, $hover-colour: var(--link-hover-colour)) {
+  // Set up transitions
+  transition: transform 0.15s ease-out, $type 0.15s ease-out;
+
+  // Targeting devices with mouse cursor
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @if $type == "fill" {
+        transform: scale(1.15);
+        svg {
+          // Need to repeat this line for svg or the transition won't work
+          transition: $type 0.15s ease-out;
+          #{$type}: $hover-colour;
+        }
+      } @else if $type == "color" {
+        transform: scale(1.1);
+        #{$type}: $hover-colour;
+      } @else {
+        @error "Valid inputs for '$type' are 'color' or 'fill'.";
+      }
+    }
+  }
+
+  // Targeting devices with touchscreen
+  &.touch-hover-effect {
+    @if $type == "fill" {
+      transform: scale(1.15);
+      svg {
+        // Need to repeat this line for svg or the transition won't work
+        transition: $type 0.15s ease-out;
+        #{$type}: $hover-colour;
+      }
+    } @else if $type == "color" {
+      transform: scale(1.1);
+      #{$type}: $hover-colour;
+    } @else {
+      @error "Valid inputs for '$type' are 'color' or 'fill'.";
+    }
+  }
+}
