@@ -10,7 +10,7 @@
     z-index: 5;
 
     // Set the header height and background colour
-    height: 7rem;
+    height: $header-height;
     background-color: hsl(240, 7%, 20%);
 
     // Change all svg fill colour
@@ -29,6 +29,6 @@
     align-items: center;
 
     // Set the nav padding
-    padding: 0 18vw;
+    padding: 0 $header-side-padding;
   }
 }

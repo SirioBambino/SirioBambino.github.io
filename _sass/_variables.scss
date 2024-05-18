@@ -1,0 +1,17 @@
+// Import font families
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+// Variables for font families
+$font-body: "Hind Guntur", sans-serif;
+$font-heading: "Inter", sans-serif;
+
+// Variables for font weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Variables for header styling
+$header-height: 7rem;
+$header-side-padding: 9vw;
