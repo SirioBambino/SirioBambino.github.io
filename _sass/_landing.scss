@@ -86,4 +86,15 @@
       }
     }
   }
+
+  &-hr {
+    // Set width, height and colour of line
+    width: $landing-line-width;
+    height: $landing-line-height;
+    background-color: var(--accent-colour);
+
+    // Set margin and remove border
+    margin: $landing-line-margin auto;
+    border: none;
+  }
 }
