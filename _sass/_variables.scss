@@ -31,6 +31,9 @@ $landing-top-text-size: clamp(3rem, 2.75vw, 4rem);
 $landing-main-text-size: clamp(5rem, 4.5vw, 6.5rem);
 $landing-text-cursor-width: clamp(3px, 0.5vw, 7px);
 $landing-text-cursor-height: clamp(60px, 5vw, 75px);
+$landing-line-height: clamp(3px, 0.5vw, 4px);
+$landing-line-width: calc(40vw + 300px);
+$landing-line-margin: clamp(15px, 5vw, 40px);
 
 // Variables for footer styling
 $footer-height: 4rem;

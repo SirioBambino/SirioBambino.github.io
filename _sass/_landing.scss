@@ -96,5 +96,18 @@
     // Set margin and remove border
     margin: $landing-line-margin auto;
     border: none;
+
+    // Set up growIn animation
+    animation: growIn ease 2s;
+
+    // Keyframes for growIn animation
+    @keyframes growIn {
+      0% {
+        width: 0vw;
+      }
+      100% {
+        width: $landing-line-width;
+      }
+    }
   }
 }
