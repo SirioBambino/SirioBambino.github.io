@@ -6,6 +6,19 @@
   cursor: pointer;
 }
 
+// Set colour to accent colour for either text or svg
+@mixin accent($type: color) {
+  @if $type == "fill" {
+    fill: var(--accent-colour);
+  } @else if $type == "color" {
+    color: var(--accent-colour);
+  } @else if $type == "stroke" {
+    stroke: var(--accent-colour);
+  } @else {
+    @error "Valid inputs for '$type' are 'color', 'fill' or 'stroke'.";
+  }
+}
+
 // Set the shape divider fill to the opposite background colour given
 @mixin shape-divider-colour($background-colour) {
   @if $background-colour == $background-primary-colour {
