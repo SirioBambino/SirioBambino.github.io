@@ -16,7 +16,7 @@ $bold: 700;
 $site-side-padding: 18vw;
 $site-side-padding-mobile: calc($site-side-padding * 0.25);
 $site-font-size: clamp(2rem, 2.5vw, 2.5rem);
-$site-line-height: 1.5rem;
+$site-line-height: 1.5em;
 
 // Variables for header styling
 $header-height: 7rem;
@@ -30,11 +30,15 @@ $header-nav-items-height-mobile: 6rem;
 
 // Variables for landing
 $landing-top-text-size: clamp(3rem, 2.75vw, 4rem);
+$landing-top-text-size-mobile: clamp(1.2rem, 4vw, 3rem);
 $landing-main-text-size: clamp(5rem, 4.5vw, 6.5rem);
+$landing-main-text-size-mobile: clamp(2rem, 6.5vw, 5rem);
 $landing-text-cursor-width: clamp(3px, 0.5vw, 7px);
 $landing-text-cursor-height: clamp(60px, 5vw, 75px);
+$landing-text-cursor-height-mobile: clamp(25px, 8.5vw, 60px);
 $landing-line-height: clamp(3px, 0.5vw, 4px);
 $landing-line-width: calc(40vw + 300px);
+$landing-line-width-mobile: 80vw;
 $landing-line-margin: clamp(15px, 5vw, 40px);
 $landing-arrows-width: clamp(25px, 5vw, 35px);
 
