@@ -15,6 +15,8 @@ $bold: 700;
 // Variables for site styling
 $site-side-padding: 18vw;
 $site-side-padding-mobile: calc($site-side-padding * 0.25);
+$site-font-size: clamp(2rem, 2.5vw, 2.5rem);
+$site-line-height: 1.5rem;
 
 // Variables for header styling
 $header-height: 7rem;

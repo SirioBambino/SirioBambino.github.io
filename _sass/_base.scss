@@ -19,11 +19,9 @@ body {
   // Set the font styling
   font-family: $font-body;
   font-weight: $regular;
-  line-height: 1.5em;
+  line-height: $site-line-height;
+  font-size: $site-font-size;
   color: var(--text-colour);
-
-  // Make the font size dependent on screen width but clamp it
-  font-size: clamp(2rem, 2.5vw, 2.5rem);
 
   // Set the width and background colour
   width: 100%;
