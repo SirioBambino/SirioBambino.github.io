@@ -110,6 +110,27 @@
       }
     }
   }
+
+  &-arrows {
+    // Position arrows
+    position: absolute;
+    bottom: 9%;
+
+    // Remove all styling from button
+    @include buttonNoStyle();
+
+    // Set colour to accent colour
+    @include accent(stroke);
+
+    svg {
+      // Set svg width
+      width: $landing-arrows-width;
+
+      // Set up svg shadow
+      filter: drop-shadow(4px 2px 2.5px rgba(0, 0, 0, 0.3));
+    }
+  }
+
   // Set shape divider colour
   @include shape-divider-colour($background-secondary-colour);
 }
