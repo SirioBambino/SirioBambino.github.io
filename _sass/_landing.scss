@@ -69,6 +69,21 @@
 
       // Set colour to accent colour
       background: var(--accent-colour);
+
+      // Set up blinking animation
+      animation: blink 0.8s steps(1, end) infinite;
+    }
+
+    // Stop blinking animation
+    span.stop-blinking::before {
+      animation: none;
+    }
+
+    // Keyframes for blink animation
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
     }
   }
 }
