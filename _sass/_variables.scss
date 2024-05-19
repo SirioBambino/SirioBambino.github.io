@@ -29,6 +29,8 @@ $header-nav-items-height-mobile: 6rem;
 // Variables for landing
 $landing-top-text-size: clamp(3rem, 2.75vw, 4rem);
 $landing-main-text-size: clamp(5rem, 4.5vw, 6.5rem);
+$landing-text-cursor-width: clamp(3px, 0.5vw, 7px);
+$landing-text-cursor-height: clamp(60px, 5vw, 75px);
 
 // Variables for footer styling
 $footer-height: 4rem;

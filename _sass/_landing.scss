@@ -52,5 +52,23 @@
       @include accent;
       position: relative;
     }
+
+    // Use before pseudo-element to create a text cursor
+    span::before {
+      content: "";
+
+      // Position text cursor
+      position: absolute;
+      top: 50%;
+      right: -2.5%;
+      transform: translateY(-45%);
+
+      // Set height and width of text cursor
+      height: $landing-text-cursor-height;
+      width: $landing-text-cursor-width;
+
+      // Set colour to accent colour
+      background: var(--accent-colour);
+    }
   }
 }
