@@ -110,4 +110,6 @@
       }
     }
   }
+  // Set shape divider colour
+  @include shape-divider-colour($background-secondary-colour);
 }
