@@ -27,4 +27,30 @@
   // Set background colour and hide y overflow
   background-color: var(--background-secondary-colour);
   overflow-y: hidden;
+
+  // Set colour of span text to accent colour
+  span {
+    @include accent;
+  }
+
+  // Set font size and line height of top text
+  &-top-text {
+    font-size: $landing-top-text-size;
+    line-height: 1em;
+  }
+
+  &-main-text {
+    // Set font size and line height of main text
+    font-size: $landing-main-text-size;
+    line-height: 1.4em;
+
+    // Set up text shadow
+    text-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+
+    // Set colour of span text to accent colour and set position
+    span {
+      @include accent;
+      position: relative;
+    }
+  }
 }

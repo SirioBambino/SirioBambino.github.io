@@ -26,5 +26,9 @@ $header-nav-font-size: 2.5rem;
 $header-nav-font-size-mobile: 3rem;
 $header-nav-items-height-mobile: 6rem;
 
+// Variables for landing
+$landing-top-text-size: clamp(3rem, 2.75vw, 4rem);
+$landing-main-text-size: clamp(5rem, 4.5vw, 6.5rem);
+
 // Variables for footer styling
 $footer-height: 4rem;
