@@ -160,3 +160,41 @@
   // Set shape divider colour
   @include shape-divider-colour($background-secondary-colour);
 }
+
+// Media query for small screens
+@media only screen and (max-width: 768px) {
+  .landing {
+    // Set different font size for top text
+    &-top-text {
+      font-size: $landing-top-text-size-mobile;
+    }
+
+    // Set different font size for main text
+    &-main-text {
+      font-size: $landing-main-text-size-mobile;
+    }
+
+    // Set different font size for text text
+    span::before {
+      height: $landing-text-cursor-height-mobile;
+    }
+
+    &-hr {
+      // Set different width for line
+      width: $landing-line-width-mobile;
+
+      // Set up growIn animation
+      animation: growIn ease 1s;
+
+      // Keyframes for growIn animation
+      @keyframes growIn {
+        0% {
+          width: 0vw;
+        }
+        100% {
+          width: 80vw;
+        }
+      }
+    }
+  }
+}
