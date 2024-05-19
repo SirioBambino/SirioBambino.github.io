@@ -1,0 +1,30 @@
+.landing {
+  // Set landing width and height to cover the entire page
+  height: 105vh;
+  width: 100%;
+
+  // Position and align elements
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  // Set up background gradient image
+  background-image: linear-gradient(
+    140deg,
+    var(--background-secondary-colour) 10%,
+    var(--background-primary-colour)
+  );
+
+  // Scale background image to cover the whole container
+  background-size: cover;
+
+  // Create parallax effect for background image
+  background-attachment: fixed;
+
+  // Set background colour and hide y overflow
+  background-color: var(--background-secondary-colour);
+  overflow-y: hidden;
+}
