@@ -1,5 +1,9 @@
 ---
 sectionID: about
 title: About Me
+layout: about
+photo: assets/images/profile-photo.png
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim, ligula eu consectetur lobortis, justo augue efficitur odio, eget fermentum ligula ex vel erat. Maecenas sit amet orci ultrices, imperdiet nunc interdum, efficitur tortor. Ut pretium enim nec libero dignissim, a scelerisque elit tincidunt. Quisque quis efficitur arcu.
+Hey, I'm a Computer Science (BSc) graduate from City University of London, with a great passion for software and game development.<br />
+My primary expertise lies in C#, Python, and Java, complemented by some knowledge of C++, HTML, CSS, and JavaScript but I always love learning new things and expanding my skill set.<br />
+[Let's connect](#contact) — I'm excited to join this industry and contribute to creative projects!
