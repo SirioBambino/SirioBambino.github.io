@@ -1,0 +1,11 @@
+<div class="about-content">
+  <div class="text">
+    {% assign paragraphs = content | split: '<br />' %}
+    {% for paragraph in paragraphs %}
+    <p>{{ paragraph | strip_html }}</p>
+    {% endfor %}
+  </div>
+  <div class="photo">
+    <img src="{{ page.photo }}" alt="Photo of Sirio Bambino" width="350" height="350" />
+  </div>
+</div>
