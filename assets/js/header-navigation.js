@@ -98,6 +98,5 @@ var selectCurrentSection = function() {
 // Select current section on page load and during scroll
 selectCurrentSection();
 
-window.addEventListener("optimizedScroll", function() {
-  selectCurrentSection();
-});
+// Using throttle on the scroll event listener will make it run every 10 ms
+window.addEventListener("scroll", throttle(selectCurrentSection, 10));

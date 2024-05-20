@@ -17,10 +17,10 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer="defer"></script>
-  {% assign static_scripts = site.static_files | where: "extname", ".js" %}
-  {% assign all_scripts = site.pages | where_exp:"item", "item.path contains 'assets/js'" | concat: static_scripts %}
+  {%- assign liquid_scripts = site.pages | where_exp:"item", "item.path contains 'assets/js'" -%}
+  {%- assign all_scripts = site.static_files | where: "extname", ".js" | concat: liquid_scripts -%}
   {% for script in all_scripts -%}
-  {% if script.url -%}
+  {%- if script.url %}
   <script src="{{ script.url }}" defer="defer"></script>
   {%- else %}
   <script src="{{ script.path }}" defer="defer"></script>
