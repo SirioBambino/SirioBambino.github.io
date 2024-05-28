@@ -1,4 +1,4 @@
-// Include the padding in the total size of all elements
+// Include padding and border in the total size of all elements
 *,
 *::before,
 *::after {
@@ -25,7 +25,7 @@ body {
 
   // Set the width and background colour
   width: 100%;
-  background-color: var(--background-primary-colour);
+  background-color: var(--primary-colour);
 }
 
 // Set the style rules for all headings in the document
@@ -64,28 +64,56 @@ a {
     margin-bottom: 5rem;
   }
 
-  // Set padding for each section
+  // Set up flexbox layout to align sections
   .content-section {
-    padding: 5vh $site-side-padding 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+  }
+
+  // Set width and padding for wrapper
+  .section-wrapper {
+    width: $site-content-width;
+    padding-top: 5vh;
   }
 
   // Alternate the 2 background colours on each section
   .content-section:nth-of-type(odd) {
-    background-color: var(--background-primary-colour);
-    @include shape-divider-colour($background-primary-colour);
+    background-color: var(--primary-colour);
+    @include shape-divider-colour($primary-colour);
   }
 
   .content-section:nth-of-type(even) {
-    background-color: var(--background-secondary-colour);
-    @include shape-divider-colour($background-secondary-colour);
+    background-color: var(--secondary-colour);
+    @include shape-divider-colour($secondary-colour);
   }
 }
 
-// Media query for small screens
+@media (max-width: 924px) {
+  .page-content {
+    // Align headings in the center
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .page-content {
-    .content-section {
-      padding: 5vh $site-side-padding-mobile 150px;
+    // Set a different width for wrapper
+    .section-wrapper {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 555px) {
+  .page-content {
+    // Set a different width for wrapper
+    .section-wrapper {
+      width: $site-content-width-mobile;
     }
   }
 }

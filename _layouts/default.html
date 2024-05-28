@@ -13,8 +13,10 @@
       {%- for section in site.sections -%}
       <!-- {{ section.sectionID | capitalize }} section -->
       <div class="{{ section.sectionID }} content-section" id="{{ section.sectionID }}">
-        <h2>{{ section.title }}</h2>
-        {{ section.output }}
+        <div class="section-wrapper">
+          <h2>{{ section.title }}</h2>
+          {{ section.output }}
+        </div>
         {%- include shape-divider.html -%}
       </div>
       {%- endfor -%}
@@ -26,5 +28,7 @@
     {% else %}
     {%- include footer.html colour="secondary" -%}
     {% endif %}
+
+    <!-- <script src="https://web3forms.com/client/script.js" async defer></script> -->
   </body>
 </html>
