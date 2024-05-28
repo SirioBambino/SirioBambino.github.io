@@ -1,6 +1,13 @@
-// Import font families
-@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+// Import fonts with font face
+@font-face {
+  font-family: "Hind Guntur";
+  src: url("../assets/fonts/HindGuntur-Light.ttf"), url("../assets/fonts/HindGuntur-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Medium.ttf");
+}
 
 // Variables for font families
 $font-body: "Hind Guntur", sans-serif;
@@ -10,37 +17,54 @@ $font-heading: "Inter", sans-serif;
 $light: 300;
 $regular: 400;
 $medium: 500;
-$bold: 700;
 
 // Variables for site styling
-$site-side-padding: 18vw;
-$site-side-padding-mobile: calc($site-side-padding * 0.25);
-$site-font-size: clamp(2rem, 2.5vw, 2.5rem);
+$site-content-width: 70%;
+$site-content-width-mobile: 90%;
+$site-content-width-mobile-fixed: 500px;
+
+$site-font-size: clamp(2rem, 2.5vw, 3rem);
 $site-line-height: 1.5em;
 
 // Variables for header styling
 $header-height: 7rem;
-$header-side-padding: calc($site-side-padding * 0.5);
-$header-side-padding-mobile: calc($site-side-padding * 0.25);
-$header-nav-items-margin: 5vw;
-$header-nav-items-margin-mobile: calc(2vh + 0px);
+
+$header-side-padding: calc($site-content-width / 7);
+$header-side-padding-mobile: calc($site-content-width / 14);
+
 $header-nav-font-size: 2.5rem;
 $header-nav-font-size-mobile: 3rem;
+
+$header-nav-items-margin: 5vw;
+$header-nav-items-margin-mobile: calc(2vh + 0px);
 $header-nav-items-height-mobile: 6rem;
 
-// Variables for landing
-$landing-top-text-size: clamp(3rem, 2.75vw, 4rem);
-$landing-top-text-size-mobile: clamp(1.2rem, 4vw, 3rem);
-$landing-main-text-size: clamp(5rem, 4.5vw, 6.5rem);
-$landing-main-text-size-mobile: clamp(2rem, 6.5vw, 5rem);
-$landing-text-cursor-width: clamp(3px, 0.5vw, 7px);
-$landing-text-cursor-height: clamp(60px, 5vw, 75px);
-$landing-text-cursor-height-mobile: clamp(25px, 8.5vw, 60px);
-$landing-line-height: clamp(3px, 0.5vw, 4px);
-$landing-line-width: calc(40vw + 300px);
-$landing-line-width-mobile: 80vw;
-$landing-line-margin: clamp(15px, 5vw, 40px);
-$landing-arrows-width: clamp(25px, 5vw, 35px);
+// Variables for landing styling
+$landing-text-base-size: 3vw;
+$landing-text-base-min: 3rem;
+$landing-text-base-max: 5rem;
+
+$landing-top-text-multiplier: 1;
+$landing-main-text-multiplier: 1.4;
+
+// Variables for projects section styling
+$frames: polygon(51% 0%, 98% 4%, 95% 51%, 98% 98%, 54% 95%, 5% 100%, 5% 34%, 0% 1%),
+  polygon(71% 1%, 98% 4%, 95% 51%, 98% 98%, 54% 95%, 6% 100%, 5% 53%, 1% 5%),
+  polygon(36% 4%, 96% 2%, 98% 49%, 96% 100%, 66% 97%, 3% 99%, 8% 62%, 3% 1%);
+
+$borders: polygon(70% 5%, 98% 1%, 95% 69%, 99% 99%, 35% 95%, 2% 98%, 6% 50%, 0 0),
+  polygon(46% 5%, 98% 1%, 93% 39%, 97% 96%, 64% 95%, 0 100%, 5% 59%, 2% 3%),
+  polygon(55% 6%, 99% 1%, 94% 41%, 100% 100%, 59% 98%, 5% 98%, 9% 71%, 5% 1%);
+
+// Variables for contact section styling
+$contact-form-width: 50rem;
+$contact-form-notch-size: 4px;
+$contact-form-input-height: 4.5rem;
+$contact-form-textarea-height: 12rem;
+
+$contact-info-font-size: clamp(1.5rem, 2vw, 2rem);
+$contact-info-icon-size: clamp(3rem, 3vw, 3.5rem);
 
 // Variables for footer styling
 $footer-height: 4rem;
+$footer-font-size: clamp(0.5rem, 3.5vw, 2rem);
