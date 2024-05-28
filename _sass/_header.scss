@@ -1,15 +1,16 @@
-// Set the style rules for elements in the header
 .site {
   &-header {
-    // Make the header fixed at the top
+    // Make header fixed at the top
     position: fixed;
     top: 0;
 
-    // Set the header width to the entire width of site
+    // Set header width to the entire width of site
     width: 100%;
+
+    // Increase z index to prevent other elements from covering header
     z-index: 5;
 
-    // Set the header height and background colour
+    // Set header height and background colour
     height: $header-height;
     background-color: var(--header-colour);
 
@@ -20,7 +21,7 @@
   }
 
   &-nav {
-    // Set the nav height to the entire height of the header
+    // Set nav height to the entire height of header
     height: 100%;
 
     // Set up flexbox layout to align elements
@@ -28,7 +29,7 @@
     justify-content: space-between;
     align-items: center;
 
-    // Set the nav padding
+    // Set nav padding
     padding: 0 $header-side-padding;
   }
 
@@ -50,6 +51,7 @@
       // Set width of logo svg
       svg {
         width: 5rem;
+        height: 4rem;
       }
     }
   }
@@ -72,7 +74,6 @@
         // Set the font styling for nav item
         font-size: $header-nav-font-size;
         font-family: $font-heading;
-        font-weight: $regular;
         color: var(--text-colour);
 
         // Remove all styling from button
@@ -95,6 +96,7 @@
       // Set width of theme toggle svg
       svg {
         width: 4rem;
+        height: 4rem;
       }
     }
   }
@@ -123,13 +125,13 @@
       // Set width of mobile menu button svg
       svg {
         width: 3.5rem;
+        height: 3.5rem;
       }
     }
   }
 }
 
-// Media query for small screens
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .site {
     // Set a different nav padding
     &-nav {
@@ -148,7 +150,7 @@
       align-items: center;
       justify-content: space-evenly;
 
-      // Set the menu width to cover the entire site
+      // Set the menu width to cover the entire page
       width: 105vw;
 
       // Move menu below the header
