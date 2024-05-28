@@ -10,12 +10,20 @@ const hoverElements = document.querySelectorAll(".hover-effect");
 // Add touchstart and touchend event listeners to each element
 hoverElements.forEach(element => {
   // Add touchstart event listener
-  element.addEventListener("touchstart", () => {
-    element.classList.add("touch-hover-effect");
-  });
+  element.addEventListener(
+    "touchstart",
+    () => {
+      element.classList.add("touch-hover-effect");
+    },
+    { passive: true },
+  );
 
   // Remove touch effect
-  element.addEventListener("touchend", () => {
-    element.classList.remove("touch-hover-effect");
-  });
+  element.addEventListener(
+    "touchend",
+    () => {
+      element.classList.remove("touch-hover-effect");
+    },
+    { passive: true },
+  );
 });
