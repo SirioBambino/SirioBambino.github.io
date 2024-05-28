@@ -4,18 +4,18 @@
   justify-content: center;
   align-items: center;
 
-  // Set the footer height
+  // Set footer height
   height: $footer-height;
 
-  // Make the font size dependent on screen width but clamp it
-  font-size: clamp(1rem, 3.5vw, 2rem);
+  // Make font size dependent on screen width but clamp it
+  font-size: $footer-font-size;
 
   // Set a different background colour depending on the number of sections
   &.primary {
-    background-color: var(--background-primary-colour);
+    background-color: var(--primary-colour);
   }
 
   &.secondary {
-    background-color: var(--background-secondary-colour);
+    background-color: var(--secondary-colour);
   }
 }
