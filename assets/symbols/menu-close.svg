@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="close-menu" width="50px" height="50px" viewBox="0 0 50 50">
+  <symbol id="close-menu" width="50" height="50" viewBox="0 0 50 50">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M43.7853 0.0186323L49.9747 6.20806L31.1864 24.9962L49.9747 43.7845L43.7853 49.9739L24.9969 31.1856L6.20886 49.9739L0.0194286 43.7845L18.8077 24.9962L0.0194286 6.20806L6.20886 0.0186323L24.9969 18.8069L43.7853 0.0186323Z"/>
   </symbol>
 </svg>
