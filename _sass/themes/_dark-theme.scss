@@ -1,15 +1,20 @@
 $accent-colour: hsl(248, 49%, 64%);
 
-$background-primary-colour: hsl(240, 7%, 17%);
-$background-secondary-colour: lighten($background-primary-colour, 6%);
+$primary-colour: hsl(240, 7%, 17%);
+$secondary-colour: lighten($primary-colour, 6%);
+$tertiary-colour: lighten($primary-colour, 28%);
 
-$header-colour: darken($background-primary-colour, 3%);
+$header-colour: darken($primary-colour, 3%);
 
 $text-colour: hsl(210, 24%, 89%);
+$text-alternate-colour: hsl(220, 9%, 46%);
+
 $icon-colour: $text-colour;
 
 $link-colour: $accent-colour;
 $link-hover-colour: lighten($link-colour, 6%);
+
+$error-colour: hsl(351, 90%, 56%);
 
 $scrollbar-background-colour: hsl(240, 7%, 16%);
 $scrollbar-handle-colour: lighten($scrollbar-background-colour, 4%);
@@ -19,12 +24,15 @@ $scrollbar-handle-colour: lighten($scrollbar-background-colour, 4%);
   body {
     --accent-colour: #{$accent-colour};
 
-    --background-primary-colour: #{$background-primary-colour};
-    --background-secondary-colour: #{$background-secondary-colour};
+    --primary-colour: #{$primary-colour};
+    --secondary-colour: #{$secondary-colour};
+    --tertiary-colour: #{$tertiary-colour};
 
     --header-colour: #{$header-colour};
 
     --text-colour: #{$text-colour};
+    --text-alternate-colour: #{$text-alternate-colour};
+
     --icon-colour: #{$icon-colour};
 
     --link-colour: #{$link-colour};
