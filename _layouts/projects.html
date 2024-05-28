@@ -16,6 +16,31 @@
 
         <!-- Border for project -->
         <div class="border index-{{ forloop.index }}">
+          <div class="project-wrapper">
+
+            <!-- Title -->
+            <h3>{{ project.title }}</h3>
+
+            <!-- Thumbnail -->
+            <div class="thumbnail">
+              <picture>
+                <img src="{{ project.thumbnail }}" alt="Thumbnail of {{ project.title }}" width="350" height="200" />
+              </picture>
+            </div>
+
+            <!-- Description -->
+            <p>
+              {{ project.description }}
+            </p>
+            
+            <!-- Tools -->
+            <div class="tools-wrapper">
+              {% assign tools = project.tools | split: " " %}
+              {% for tool in tools %}
+              <div class="tools">{{ tool }}</div>
+            {% endfor %}
+            </div>
+          </div>
         </div>
       </a>
     </div>
