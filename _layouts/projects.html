@@ -1,0 +1,8 @@
+<div class="projects-content">
+  <!-- Frames for projects -->
+  <div class="frames">
+    {% for project in site.data.projects.entries %}
+    <div class="frame index-{{ forloop.index }}"></div>
+    {% endfor %}
+  </div>
+</div>
