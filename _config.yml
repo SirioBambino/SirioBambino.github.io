@@ -7,6 +7,7 @@ description:
 author:
   name: Sirio Bambino
   email: bambino.sirio@gmail.com
+  location: London, UK
   github: https://github.com/SirioBambino
   linkedin: https://www.linkedin.com/in/siriobambino
 
@@ -15,6 +16,16 @@ social:
   links:
     - https://github.com/SirioBambino
     - https://www.linkedin.com/in/siriobambino
+
+locale: en_UK
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/logo.png
+
+google_site_verification: bXDaBrUXqtjNNm8STiOkEIsVXjDjmylAZgFnTLCoIAY
 
 domain: siriobambino.github.io
 url: https://siriobambino.github.io
@@ -37,6 +48,7 @@ jekyll-minifier:
 
 exclude:
   - Gemfile
+  - /.vscode
   - README.md
 
 plugins:
