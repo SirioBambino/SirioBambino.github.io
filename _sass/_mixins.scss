@@ -2,7 +2,7 @@
 @mixin buttonNoStyle() {
   background-color: transparent;
   outline: none;
-  border: 0px transparent solid;
+  border: none;
   cursor: pointer;
 }
 
@@ -16,25 +16,6 @@
     stroke: var(--accent-colour);
   } @else {
     @error "Valid inputs for '$type' are 'color', 'fill' or 'stroke'.";
-  }
-}
-
-// Set the shape divider fill to the opposite background colour given
-@mixin shape-divider-colour($background-colour) {
-  @if $background-colour == $background-primary-colour {
-    .shape-divider {
-      svg {
-        fill: var(--background-secondary-colour);
-      }
-    }
-  } @else if $background-colour == $background-secondary-colour {
-    .shape-divider {
-      svg {
-        fill: var(--background-primary-colour);
-      }
-    }
-  } @else {
-    @error "Valid inputs for '$background-colour' are '$background-primary-colour' or '$background-secondary-colour'.";
   }
 }
 
@@ -79,5 +60,24 @@
     } @else {
       @error "Valid inputs for '$type' are 'color' or 'fill'.";
     }
+  }
+}
+
+// Set the shape divider fill to the opposite background colour given
+@mixin shape-divider-colour($background-colour) {
+  @if $background-colour == $primary-colour {
+    .shape-divider {
+      svg {
+        fill: var(--secondary-colour);
+      }
+    }
+  } @else if $background-colour == $secondary-colour {
+    .shape-divider {
+      svg {
+        fill: var(--primary-colour);
+      }
+    }
+  } @else {
+    @error "Valid inputs for '$background-colour' are '$primary-colour' or '$secondary-colour'.";
   }
 }
