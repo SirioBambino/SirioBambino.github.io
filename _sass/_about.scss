@@ -1,46 +1,107 @@
 .about-content {
+  // Set up flexbox layout to align elements
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  gap: 5vw;
 
   .text {
+    // Set flexbox child parameters
+    flex: 1 1 30%;
+
+    // Set spacing between paragraphs
     p {
       margin-bottom: 1em;
     }
   }
 
   .photo {
-    margin-left: 5vw;
+    // Set position to relative to provide anchor to absolute elements
+    position: relative;
+
+    // Set flexbox child parameters
+    flex: 1 1 0;
+
+    // Set up flexbox layout to align elements
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Set max width do image doesnt get too big
+    max-width: 15em;
+
+    .frame {
+      // Position frame so it's behind the photo
+      position: absolute;
+      left: -7%;
+
+      // Make frame slightly bigger
+      width: 110%;
+      height: 110%;
+
+      // Set background colour and clip path for frame
+      background-color: var(--tertiary-colour);
+      clip-path: polygon(9% 24%, 54% 0, 93% 27%, 94% 77%, 49% 99%, 5% 71%);
+    }
+
+    .border {
+      // Position border so it's behind the photo
+      position: absolute;
+
+      // Make border slightly bigger
+      width: 103%;
+      height: 103%;
+
+      // Set background colour and clip path for border
+      background-color: var(--accent-colour);
+      clip-path: polygon(36% 0, 84% 10%, 100% 50%, 79% 92%, 39% 100%, 7% 77%, 0 31%);
+    }
 
     img {
+      // Set display to block so image lines up with border and frame
+      display: block;
+
+      // Set size so the image can change size but keep aspect ratio
       width: 100%;
       height: auto;
-      // max-height: 350px;
-      border-radius: 50%;
-      border: 4px solid var(--accent-colour);
-      background-color: var(--background-secondary-colour);
+
+      // Set background colour and clip path for image
+      background-color: var(--secondary-colour);
+      clip-path: polygon(36% 0, 84% 10%, 100% 50%, 79% 92%, 39% 100%, 7% 77%, 0 31%);
     }
   }
+}
 
-  html[data-theme="light"] {
-    .photo {
-      img {
-        filter: brightness(115%);
-      }
+// Make the image slightly brighter on light mode
+// html[data-theme="light"] {
+//   .photo {
+//     img {
+//       filter: brightness(115%);
+//     }
+//   }
+// }
+
+@media (max-width: 1600px) {
+  .about-content {
+    // Set smaller basis for flexbox child
+    .text {
+      flex: 1 1 20%;
     }
   }
 }
 
 @media (max-width: 1200px) {
   .about-content {
+    // Change flexbox direction
     flex-direction: column;
 
     .photo {
-      margin-left: 0;
+      // Set margin to photo so it doesn't get too big
+      margin: 0 calc(10vw + 10px);
 
+      // Make max width slightly smaller
       img {
-        max-width: 250px;
+        max-width: 13em;
       }
     }
   }
