@@ -1,22 +1,36 @@
 .landing {
   // Set landing width and height to cover the entire page
-  height: 105vh;
   width: 100%;
+  height: 105vh;
 
-  // Position and align elements
-  position: relative;
+  // Set up flexbox layout to align elements
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: end;
+
+  // Set top padding
+  padding-top: $header-height;
+
+  &-wrapper {
+    // Set wrapper width, height and bottom margin
+    width: $site-content-width;
+    height: 100%;
+    margin-bottom: -100px;
+
+    // Set position to relative to provide anchor to absolute elements
+    position: relative;
+
+    // Set up flexbox layout to align elements
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
   // Set up background gradient image
-  background-image: linear-gradient(
-    140deg,
-    var(--background-secondary-colour) 10%,
-    var(--background-primary-colour)
-  );
+  background-image: linear-gradient(140deg, var(--secondary-colour) 10%, var(--primary-colour));
 
   // Scale background image to cover the whole container
   background-size: cover;
@@ -25,7 +39,7 @@
   background-attachment: fixed;
 
   // Set background colour and hide y overflow
-  background-color: var(--background-secondary-colour);
+  background-color: var(--secondary-colour);
   overflow-y: hidden;
 
   // Set colour of span text to accent colour
@@ -35,13 +49,23 @@
 
   // Set font size and line height of top text
   &-top-text {
-    font-size: $landing-top-text-size;
+    font-size: clamp(
+      calc($landing-text-base-min * $landing-top-text-multiplier),
+      calc($landing-text-base-size * $landing-top-text-multiplier),
+      calc($landing-text-base-max * $landing-top-text-multiplier)
+    );
     line-height: 1em;
+
+    text-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
   }
 
   &-main-text {
     // Set font size and line height of main text
-    font-size: $landing-main-text-size;
+    font-size: clamp(
+      calc($landing-text-base-min * $landing-main-text-multiplier),
+      calc($landing-text-base-size * $landing-main-text-multiplier),
+      calc($landing-text-base-max * $landing-main-text-multiplier)
+    );
     line-height: 1.4em;
 
     // Set up text shadow
@@ -63,12 +87,14 @@
       right: -2.5%;
       transform: translateY(-45%);
 
-      // Set height and width of text cursor
-      height: $landing-text-cursor-height;
-      width: $landing-text-cursor-width;
+      // Set width and height of text cursor
+      width: 0.11em;
+      height: 1.25em;
 
       // Set colour to accent colour
       background: var(--accent-colour);
+
+      box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.3);
 
       // Set up blinking animation
       animation: blink 0.8s steps(1, end) infinite;
@@ -89,13 +115,15 @@
 
   &-hr {
     // Set width, height and colour of line
-    width: $landing-line-width;
-    height: $landing-line-height;
+    width: 100%;
+    height: 0.2em;
     background-color: var(--accent-colour);
 
     // Set margin and remove border
-    margin: $landing-line-margin auto;
+    margin: 1.25em 0;
     border: none;
+
+    box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.3);
 
     // Set up growIn animation
     animation: growIn ease 2s;
@@ -103,10 +131,10 @@
     // Keyframes for growIn animation
     @keyframes growIn {
       0% {
-        width: 0vw;
+        width: 0%;
       }
       100% {
-        width: $landing-line-width;
+        width: 100%;
       }
     }
   }
@@ -127,7 +155,7 @@
 
     svg {
       // Set svg width
-      width: $landing-arrows-width;
+      width: clamp(25px, 5vw, 35px);
 
       // Set up svg shadow
       filter: drop-shadow(4px 2px 2.5px rgba(0, 0, 0, 0.3));
@@ -157,44 +185,49 @@
     }
   }
 
+  // .parallax {
+  //   transition: transform 0.05s;
+  // }
+
   // Set shape divider colour
-  @include shape-divider-colour($background-secondary-colour);
+  @include shape-divider-colour($secondary-colour);
 }
 
-// Media query for small screens
 @media only screen and (max-width: 768px) {
   .landing {
+    // Set different width for wrapper
+    &-wrapper {
+      width: $site-content-width-mobile-fixed;
+    }
+
     // Set different font size for top text
     &-top-text {
-      font-size: $landing-top-text-size-mobile;
+      font-size: min(
+        calc($landing-text-base-size * $landing-top-text-multiplier * 1.8),
+        calc($landing-text-base-max * $landing-top-text-multiplier * 0.6)
+      );
     }
 
     // Set different font size for main text
     &-main-text {
-      font-size: $landing-main-text-size-mobile;
+      font-size: min(
+        calc($landing-text-base-size * $landing-main-text-multiplier * 1.8),
+        calc($landing-text-base-max * $landing-main-text-multiplier * 0.6)
+      );
     }
+  }
+}
 
-    // Set different font size for text text
-    span::before {
-      height: $landing-text-cursor-height-mobile;
-    }
+@media only screen and (max-width: 555px) {
+  // Set different width
+  .landing-wrapper {
+    width: $site-content-width-mobile;
+  }
+}
 
-    &-hr {
-      // Set different width for line
-      width: $landing-line-width-mobile;
-
-      // Set up growIn animation
-      animation: growIn ease 1s;
-
-      // Keyframes for growIn animation
-      @keyframes growIn {
-        0% {
-          width: 0vw;
-        }
-        100% {
-          width: 80vw;
-        }
-      }
-    }
+@media only screen and (max-height: 500px) {
+  // Set a larger height for landing on screens with small height
+  .landing {
+    height: 150vh;
   }
 }
