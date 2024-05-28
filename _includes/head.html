@@ -1,5 +1,15 @@
 <!-- Head -->
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZXGQKD8R4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZXGQKD8R4');
+  </script>
+
   <!-- Meta -->
   <meta charset="”utf-8″" />
   <meta name="language" content="English" />
@@ -8,6 +18,7 @@
   <title>{{ site.title }}</title>
 
   {% seo title = false %}
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | absolute_url }}" />
 
@@ -16,7 +27,6 @@
   <link rel="icon" type="image/png" hyref="assets/images/logo-favicon.png" />
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer="defer"></script>
   {%- assign liquid_scripts = site.pages | where_exp:"item", "item.path contains 'assets/js'" -%}
   {%- assign all_scripts = site.static_files | where: "extname", ".js" | concat: liquid_scripts -%}
   {% for script in all_scripts -%}
