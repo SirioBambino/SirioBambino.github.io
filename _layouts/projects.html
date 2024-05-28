@@ -5,4 +5,20 @@
     <div class="frame index-{{ forloop.index }}"></div>
     {% endfor %}
   </div>
+
+  <!-- Projects -->
+  <div class="projects">
+    {% for project in site.data.projects.entries %}
+    <div class="project">
+
+      <!-- Link to project repository -->
+      <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+
+        <!-- Border for project -->
+        <div class="border index-{{ forloop.index }}">
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 </div>
