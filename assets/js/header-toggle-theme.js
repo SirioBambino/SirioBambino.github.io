@@ -1,5 +1,5 @@
 // Get current theme from local storage if it exists or set to null
-var currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
+let currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
 
 // Get element for each button type
 const lightButton = document.querySelector(".light-theme-button");

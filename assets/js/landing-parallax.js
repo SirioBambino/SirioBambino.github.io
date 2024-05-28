@@ -9,4 +9,7 @@ function runOnScroll() {
 }
 
 // Using throttle on the scroll event listener will make it run every 10 ms
-window.addEventListener("scroll", throttle(runOnScroll, 10));
+// Don't run on mobile devices as performance is bad
+if (!window.mobileCheck()) {
+  window.addEventListener("scroll", throttle(runOnScroll, 10), { passive: true });
+}
