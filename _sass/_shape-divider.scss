@@ -1,8 +1,6 @@
 .shape-divider {
-  // Position div at the bottom of section
-  position: absolute;
-  left: 0;
-  padding: 0;
+  // Make height based on screen width and clamp it
+  height: clamp(7.5rem, 12.5vw, 15rem);
 
   // Set the width of div to the entire width of the body
   width: 100%;
@@ -22,11 +20,6 @@
     position: relative;
     display: block;
     width: 102.5%;
-    height: 150px;
+    height: 100%;
   }
-}
-
-// Set bottom of the first div to 0 to prevent it from moving from the bottom
-.first {
-  bottom: 0;
 }
