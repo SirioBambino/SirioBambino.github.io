@@ -10,7 +10,7 @@ var scrollToSection = function(id = top) {
     return;
   }
   let section = document.getElementById(id);
-  window.scrollTo(0, section.offsetTop - 40); // Offset position for better framing
+  window.scrollTo(0, section.offsetTop - 60); // Offset position for better framing
 };
 
 // Use liquid to initialise needed variables for each section
@@ -19,19 +19,13 @@ let {{ section.sectionID }} = document.getElementById("{{ section.sectionID }}")
 let {{ section.sectionID }}Nav = document.getElementById("{{ section.sectionID }}-nav");
 {%- endfor %}
 
-// When the document is ready, use liquid to set the value for each variable
-$(document).ready(function() {
-  {%- for section in site.sections %}
-  let {{ section.sectionID }} = document.getElementById("{{ section.sectionID }}");
-  let {{ section.sectionID }}Nav = document.getElementById("{{ section.sectionID }}-nav");
-  {%- endfor %}
-});
-
 // This function checks the current location of the page using the window scroll value and 
 // assigns a class to the nav menu button that corresponds to the current location so that 
 // it can be styled.
 // Liquid is used to create an if else branch that works for any amount of sections.
 var selectCurrentSection = function() {
+  const sectionOffset = 300;
+
   {% comment %} Iterate through each section {% endcomment %}
   {%- for section in site.sections -%}
 
@@ -39,8 +33,8 @@ var selectCurrentSection = function() {
   {%- if forloop.first -%}
 
   // Check if Y scroll value is between the first section and the next
-  if (window.scrollY >= {{ section.sectionID }}.offsetTop - 300 && 
-    window.scrollY < {{ site.sections[forloop.index].sectionID | downcase }}.offsetTop - 300 ) {
+  if (window.scrollY >= {{ section.sectionID }}.offsetTop - sectionOffset && 
+    window.scrollY < {{ site.sections[forloop.index].sectionID | downcase }}.offsetTop - sectionOffset ) {
       // Remove current class from all sections except current one
     {%- for s in site.sections -%}
     {%- if s != section %}
@@ -56,7 +50,7 @@ var selectCurrentSection = function() {
   {%- elsif forloop.last %}
 
   // Check if Y scroll value is after the last section
-  else if (window.scrollY >= {{ section.sectionID }}.offsetTop - 300) {
+  else if (window.scrollY >= {{ section.sectionID }}.offsetTop - sectionOffset) {
     // Remove current class from all sections except current one
     {%- for s in site.sections -%}
     {%- if s != section %}
@@ -72,8 +66,8 @@ var selectCurrentSection = function() {
   {%- else -%}
 
   // Check if Y scroll value is between the current section and the next
-  else if (window.scrollY >= {{ section.sectionID }}.offsetTop - 300 && 
-    window.scrollY < {{ site.sections[forloop.index].sectionID | downcase }}.offsetTop - 300 ) {
+  else if (window.scrollY >= {{ section.sectionID }}.offsetTop - sectionOffset && 
+    window.scrollY < {{ site.sections[forloop.index].sectionID | downcase }}.offsetTop - sectionOffset ) {
       // Remove current class from all sections except current one
       {%- for s in site.sections -%}
       {%- if s != section %}
