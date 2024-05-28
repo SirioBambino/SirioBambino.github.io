@@ -1,0 +1,26 @@
+entries:
+  - title: RogueFrog
+    url: https://github.com/SirioBambino/RogueFrog
+    thumbnail: assets/images/roguefrog.avif
+    description:
+      A roguelike third-person shooter, developed with Unity for the final project of my degree. It
+      uses various procedural generation toolsniques such as binary space partitioning, cellular
+      automata and others to create interesting levels.
+    tools: C# Unity
+
+  - title: Stellar Rush
+    url: https://github.com/SirioBambino/StellarRush
+    thumbnail: assets/images/stellar-rush.avif
+    description:
+      A simple endless runner game developed on a custom game engine for the Computer Graphics
+      module I did for my degree. Showcases usage of shaders, VAOs, Catmull-Rom splines and other
+      toolsniques.
+    tools: C++ OpenGL
+
+  - title: Portfolio Website
+    url: https://github.com/SirioBambino/siriobambino.github.io
+    thumbnail: assets/images/website.avif
+    description:
+      A responsive, static, single-page website to showcase my portfolio. The site diplays
+      information about myself, my project, and ways to contact me.
+    tools: HTML Sass JavaScript Jekyll
