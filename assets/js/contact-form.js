@@ -1,3 +1,23 @@
+// This function enables the submit button only when all input fields are filled
+function enableSubmit() {
+  // Get input fields and button elements
+  let inputs = document.querySelectorAll(".form-wrapper input, .form-wrapper textarea");
+  let button = document.querySelector('button[type="submit"]');
+  let isValid = true;
+
+  // Iterate through all the input fields and check if they're empty
+  for (let i = 0; i < inputs.length; i++) {
+    let changedInput = inputs[i];
+    if (changedInput.value.trim() === "" || changedInput.value === null) {
+      isValid = false;
+      break;
+    }
+  }
+
+  // Enable the button only if all input fields are filled
+  button.disabled = !isValid;
+}
+
 // Handle form submission
 const form = document.getElementById("form");
 const result = document.getElementById("result");
