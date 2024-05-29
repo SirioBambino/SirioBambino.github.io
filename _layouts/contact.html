@@ -1,0 +1,47 @@
+<div class="contact-content">
+
+  <!-- Form -->
+  <div class="form-container">
+    <form method="POST" id="form">
+
+      <!-- b1df000c-54e3-42c7-a846-351df6c899e7 -->
+      <input type="hidden" name="access_key" value=""> 
+
+      <!-- Change from name in emails received -->
+      <input type="hidden" name="from_name" value="Website Message">
+
+      <!-- Change subject in emails received -->
+      <input type="hidden" name="subject" value="New message" id="form-subject">
+
+      <!-- Add honeypot to help prevent bots -->
+      <input type="checkbox" name="botcheck" id="" style="display: none;">
+    
+      <div class="form-wrapper">
+        <!-- Name input -->
+        <div>
+          <label for="name" class="form-label"></label>
+          <input id="name" name="name" class="form-input" placeholder="Name" type="text" onkeyup="enableSubmit()"/>
+        </div>
+
+        <!-- Email input -->
+        <div>
+          <label for="email" class="form-label"></label>
+          <input id="email" name="email" class="form-input" placeholder="Email" type="email" onkeyup="enableSubmit()"/>
+        </div>
+
+        <!-- Message input -->
+        <div>
+          <label for="message" class="form-label"></label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Message" onkeyup="enableSubmit()"></textarea>
+        </div>
+
+        <!-- Form result -->
+        <div class="result" id="result"></div>
+
+        <!-- Submit button -->
+        <button class="form-submit" type="submit" disabled="disabled">Send Message</button>
+      </div>
+    </form>
+  </div>
+
+</div>
