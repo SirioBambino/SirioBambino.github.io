@@ -1,0 +1,41 @@
+.error-404-content {
+  // Set width and height for content
+  width: 100%;
+  height: 99vh;
+
+  // Set up flexbox layout to align elements
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  // Set top padding
+  padding-top: $header-height;
+
+  // Set up background gradient image
+  background-image: linear-gradient(140deg, var(--secondary-colour) 10%, var(--primary-colour));
+
+  .error-404-wrapper {
+    // Set width and height for wrapper
+    width: $site-content-width;
+    height: 100%;
+
+    // Set up flexbox layout to align elements
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    line-height: 3rem;
+
+    // Set header styling
+    h1 {
+      font-size: 10rem;
+      line-height: 10rem;
+      letter-spacing: -5px;
+    }
+  }
+
+  // Set shape divider colour
+  @include shape-divider-colour($primary-colour);
+}
