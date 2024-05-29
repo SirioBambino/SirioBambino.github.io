@@ -175,3 +175,28 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .contact-content {
+    // Change flexbox direction
+    flex-direction: column;
+
+    .info-container {
+      // Set info width to the entire width of wrapper
+      width: 100%;
+
+      // Set different font size
+      font-size: clamp(1rem, 5.5vw, 2rem);
+
+      // Set different svg size
+      svg {
+        width: clamp(3rem, 8vw, 3.5rem);
+      }
+    }
+
+    // Set form width to the entire width of wrapper
+    .form-container {
+      width: 100%;
+    }
+  }
+}
