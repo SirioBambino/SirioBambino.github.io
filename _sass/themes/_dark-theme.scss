@@ -38,6 +38,8 @@ $scrollbar-handle-colour: lighten($scrollbar-background-colour, 4%);
     --link-colour: #{$link-colour};
     --link-hover-colour: #{$link-hover-colour};
 
+    --error-colour: #{$error-colour};
+
     --scrollbar-background-colour: #{$scrollbar-background-colour};
     --scrollbar-handle-colour: #{$scrollbar-handle-colour};
   }
