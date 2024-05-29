@@ -1,0 +1,45 @@
+.projects-content {
+  // Set position to relative to provide anchor to absolute elements
+  position: relative;
+
+  // Set up text styling
+  font-size: clamp(1rem, 1vw, 2rem);
+  line-height: clamp(1.25rem, 1.15vw, 2.25rem);
+  text-align: center;
+
+  .frames {
+    // Set position to absolute so that frames can be under the projects
+    position: absolute;
+
+    // Set size to the full size of parent element
+    width: 100%;
+    height: 100%;
+
+    // Set up grid layout to align elements
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+
+    line-height: 5rem;
+
+    .frame {
+      // Set the max height and aspect ratio
+      max-height: 60rem;
+      aspect-ratio: 1 / 1.25;
+
+      // Set background colour
+      background-color: var(--primary-colour);
+
+      // Scale frame up slightly
+      transform: scale(1.05);
+    }
+
+    // Select a different clip path for each frame from a list
+    @for $i from 1 through 3 {
+      .index-#{$i} {
+        $key: random(length($frames));
+        clip-path: nth($frames, $i);
+      }
+    }
+  }
+}
