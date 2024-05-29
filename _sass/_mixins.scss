@@ -6,6 +6,19 @@
   cursor: pointer;
 }
 
+@mixin addNotchedCorners($notch-size: 4px) {
+  clip-path: polygon(
+    0% $notch-size,
+    $notch-size 0%,
+    calc(100% - $notch-size) 0%,
+    100% $notch-size,
+    100% calc(100% - $notch-size),
+    calc(100% - $notch-size) 100%,
+    $notch-size 100%,
+    0% calc(100% - $notch-size)
+  );
+}
+
 // Set colour to accent colour for either text or svg
 @mixin accent($type: color) {
   @if $type == "fill" {
