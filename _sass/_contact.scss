@@ -1,0 +1,73 @@
+.contact-content {
+  // Set up flexbox layout to align elements
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+
+  .info-container {
+    // Set up flexbox layout to align elements
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    // Make the font size dependent on screen width but clamp it
+    font-size: $contact-info-font-size;
+
+    svg {
+      width: $contact-info-icon-size;
+      height: 3.5rem;
+
+      // Change all svg fill colour
+      fill: var(--icon-colour);
+    }
+
+    .email,
+    .linkedin,
+    .github,
+    .cv,
+    .location {
+      // Set the height
+      height: 5.5rem;
+
+      // Set up flexbox layout to align elements
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+
+      // Set up flexbox layout to align icon
+      &-icon {
+        display: flex;
+        align-items: center;
+      }
+
+      &-info {
+        // Set up flexbox layout to align elements
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 2.75rem;
+
+        // Set heading colour
+        h3 {
+          color: var(--accent-colour);
+        }
+
+        // Set font weight and colour
+        span {
+          font-weight: $light;
+          color: var(--text-colour);
+        }
+      }
+    }
+
+    // Set hover behaviour
+    .linkedin-info,
+    .cv-info,
+    .github-info {
+      @include hover();
+    }
+  }
+}
