@@ -168,3 +168,51 @@
     }
   }
 }
+
+@media (max-width: 1409px) {
+  .projects-content {
+    // Set different font size and line height
+    font-size: clamp(1.35rem, 1.5vw, 2rem);
+    line-height: clamp(1.7rem, 1.75vw, 2.25rem);
+  }
+}
+
+@media (max-width: 924px) {
+  .projects-content {
+    // Set different font size and line height
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+
+    // Center each frame and project using auto margin
+    .frame,
+    .project {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-content {
+    // Set different font size and line height
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    line-height: clamp(1.25rem, 4.5vw, 2.25rem);
+  }
+}
+
+@media (max-width: 335px) {
+  .projects-content {
+    // Set different font size and line height
+    font-size: clamp(0.5rem, 4.5vw, 1.5rem);
+    line-height: clamp(0.75rem, 4.75vw, 1.5rem);
+
+    .frames,
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .projects .project .border .project-wrapper .thumbnail {
+      // Set height
+      height: 40%;
+    }
+  }
+}
