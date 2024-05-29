@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
 
-  // Set footer height
+  // Set footer width and height
+  width: 100%;
   height: $footer-height;
 
   // Make font size dependent on screen width but clamp it
