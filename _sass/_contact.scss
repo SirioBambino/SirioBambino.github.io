@@ -6,6 +6,110 @@
   justify-content: space-between;
   gap: 5rem;
 
+  .form-container {
+    // Set width of container
+    width: $contact-form-width;
+
+    .form-wrapper {
+      // Set up flexbox layout to align elements
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      // Set wrapper width to the entire width of container
+      width: 100%;
+
+      .form-input,
+      .form-textarea {
+        // Set width and height of input
+        width: 100%;
+        height: $contact-form-input-height;
+
+        // Set padding border and margin
+        padding: 1.25rem 1rem 1rem;
+        border: none;
+        margin-bottom: 1rem;
+
+        // Set font styling
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text-colour);
+
+        // Set background colour
+        background-color: var(--secondary-colour);
+
+        // Create notches in the corners
+        @include addNotchedCorners($contact-form-notch-size);
+
+        // Set colour for placeholder text
+        &::placeholder {
+          color: var(--text-alternate-colour);
+        }
+
+        // Remove outline when input is in focus
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      .form-textarea {
+        // Set minimum height for text area
+        min-height: $contact-form-textarea-height;
+
+        // Make text area not resizeable
+        resize: none;
+      }
+
+      .form-submit {
+        // Set width, padding, border and margin
+        width: 100%;
+        padding: 13px 5px;
+        border: 0px transparent solid;
+        margin-top: 1.2rem;
+
+        //  Set background and text colour
+        background-color: var(--accent-colour);
+        color: var(--text-colour);
+
+        // Set cursor to pointer when hovering button
+        cursor: pointer;
+
+        // Create notches in the corners of button
+        @include addNotchedCorners($contact-form-notch-size);
+
+        // Set button styling when disabled
+        &:disabled,
+        &[disabled] {
+          background-color: var(--accent-colour);
+          color: var(--text-colour);
+          opacity: 50%;
+          cursor: not-allowed;
+        }
+      }
+
+      // Set styling for error and result messages
+      .error-message,
+      .result {
+        color: var(--error-colour);
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+
+      // Remove styling when input is autofilled
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus {
+        transition: background-color 999999s;
+        -webkit-text-fill-color: var(--text-colour);
+        -webkit-box-shadow: none;
+      }
+    }
+  }
+
   .info-container {
     // Set up flexbox layout to align elements
     display: flex;
