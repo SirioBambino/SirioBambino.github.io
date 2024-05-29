@@ -91,6 +91,71 @@
 
         // Set background colour
         background-color: var(--tertiary-colour);
+
+        .project-wrapper {
+          // Set up grid layout to align elements
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+
+          // Set size smaller to give enough space for clip path
+          width: 80%;
+          height: 80%;
+
+          .thumbnail {
+            // Set flexbox child parameters
+            flex: 0 0 auto;
+
+            // Set height
+            height: 45%;
+
+            img {
+              // Ensure image fills the entire thumbnail div
+              width: auto;
+              height: 100%;
+
+              max-width: 100%;
+
+              // Set up shadow for thumbnail
+              box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.3);
+            }
+          }
+
+          // Set top margin to auto to center text vertically
+          p {
+            margin-top: auto;
+          }
+
+          .tools-wrapper {
+            // Set up grid layout to align elements
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4em;
+
+            // Set top margin to auto to push tools to the bottom
+            margin-top: auto;
+
+            .tools {
+              // Set display to give gaps between the divs
+              display: inline-block;
+
+              // Set background and text colour
+              background-color: var(--accent-colour);
+              color: hsl(210, 24%, 89%);
+
+              // Set line height
+              line-height: 1.75rem;
+
+              // Set up padding to center text vertically
+              padding: 0.6em 0.3em 0.3em;
+
+              // Set up text and div shadow
+              text-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+              box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
       }
 
       // Select a different clip path for each border from a list
