@@ -17,6 +17,7 @@
 
     <!-- Menu -->
     <div class="site-menu">
+      {% if include.show-nav == "true" %}
       <!-- Navigation -->
       {%- for section in site.sections -%}
       <div class="site-menu-item">
@@ -31,6 +32,7 @@
         </button>
       </div>
       {%- endfor -%}
+      {% endif -%}
 
       <!-- Theme button -->
       <div class="site-menu-item">
@@ -51,6 +53,7 @@
       </div>
     </div>
 
+    {% if include.show-nav == "true" %}
     <!-- Menu button -->
     <div class="site-menu-button">
       <button 
@@ -68,5 +71,6 @@
         </svg>
       </button>
     </div>
+    {% endif -%}
   </nav>
 </header>

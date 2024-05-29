@@ -3,7 +3,7 @@
   {% include head.html -%}
 
   <body>
-    {% include header.html -%}
+    {% include header.html show-nav="true" -%}
     {% include landing.html -%}
 
     <main class="page-content">
@@ -28,7 +28,5 @@
     {% else %}
     {%- include footer.html colour="secondary" -%}
     {% endif %}
-
-    <!-- <script src="https://web3forms.com/client/script.js" async defer></script> -->
   </body>
 </html>
