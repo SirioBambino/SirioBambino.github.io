@@ -1,0 +1,43 @@
+--- 
+permalink: /404.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    <!-- Meta -->
+    <meta charset="”utf-8″" />
+    <meta name="language" content="English" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ site.title }}</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/main.css' | absolute_url }}" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/symbols/logo-favicon.svg" />
+    <link rel="icon" type="image/png" hyref="assets/images/logo-favicon.png" />
+
+    <script src="{{ '/assets/js/header-toggle-theme.js' | absolute_url }}" defer="defer"></script>
+  </head>
+
+  <body>
+    {% include header.html show-nav="false" -%}
+
+    <main class="error-404-content">
+      <div class="error-404-wrapper">
+        <h1>404</h1>
+
+        <p><strong>Page not found</strong></p>
+        <br />
+        <p>The requested page could not be found.</p>
+        <p><a href="/">Click here to go back to the home page.</a></p>
+      </div>
+      {% include shape-divider.html -%}
+      {%- include footer.html colour="secondary" -%}
+    </main>
+
+  </body>
+</html>
