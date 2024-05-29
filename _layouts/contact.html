@@ -44,4 +44,74 @@
     </form>
   </div>
 
+  <!-- Info -->
+  <div class="info-container">
+
+    <!-- Email -->
+    <div class="email">
+      <div class="email-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <title>Email icon</title>
+          <use xlink:href="assets/symbols/mail.svg#mail" width="40" height="40" />
+        </svg>
+      </div>
+      <div class="email-info">
+        <h3>Email</h3>
+        <a href="mailto:bambino.sirio@gmail.com"><span>{{ site.author.email }}</span></a>
+      </div>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="linkedin">
+      <div class="linkedin-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <title>LinkedIn icon</title>
+          <use xlink:href="assets/symbols/linkedin.svg#linkedin" width="40" height="40" />
+        </svg>
+      </div>
+      <div class="linkedin-info">
+        <a href="{{ site.author.linkedin }}" target="_blank" rel="noreferrer"><h3>LinkedIn</h3></a>
+      </div>
+    </div>
+
+    <!-- GitHub -->
+    <div class="github">
+      <div class="github-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <title>Email icon</title>
+          <use xlink:href="assets/symbols/github.svg#github" width="40" height="40" />
+        </svg>
+      </div>
+      <div class="github-info">
+        <a href="{{ site.author.github }}" target="_blank" rel="noreferrer"><h3>GitHub</h3></a>
+      </div>
+    </div>
+
+    <!-- CV -->
+    <div class="cv">
+      <div class="cv-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <title>Email icon</title>
+          <use xlink:href="assets/symbols/cv.svg#cv" width="40" height="40" />
+        </svg>
+      </div>
+      <div class="cv-info">
+        <a href="assets/CV Sirio Bambino.pdf" target="_blank" rel="noreferrer"><h3>CV</h3></a>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="location">
+      <div class="location-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <title>Location icon</title>
+          <use xlink:href="assets/symbols/location.svg#location" width="40" height="40" />
+        </svg>
+      </div>
+      <div class="location-info">
+        <h3>Location</h3>
+        <span>{{ site.author.location }}</span>
+      </div>
+    </div>
+  </div>
 </div>
